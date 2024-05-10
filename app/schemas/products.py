@@ -26,6 +26,7 @@ class ProductInDBBase(ProductBase):
 
     class Config:
         from_attributes = True
+        orm_mode = True
 
 class ProductInDB(ProductInDBBase):
     pass
