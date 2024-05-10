@@ -23,5 +23,6 @@ COPY . .
 # 컨테이너의 8080 포트 노출
 EXPOSE 8080
 
+RUN chmod +x ./entrypoint.sh
 # 컨테이너 시작 시 실행할 명령 설정
 CMD ["./entrypoint.sh"]
