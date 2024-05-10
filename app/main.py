@@ -1,17 +1,18 @@
 # main.py
 from fastapi import FastAPI
 from app.api.v1.router import api_router
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
 # CORS 미들웨어 설정
-# app.add_middleware(
-#   CORSMiddleware,
-#   allow_origins=["*"],
-#   allow_credentials=True,
-#   allow_methods=["*"],
-#   allow_headers=["*"],
-# )
+app.add_middleware(
+  CORSMiddleware,
+  allow_origins=["*"],
+  allow_credentials=True,
+  allow_methods=["*"],
+  allow_headers=["*"],
+)
 
 API_V1_STR = "/api/v1"
 # API 라우터 추가
