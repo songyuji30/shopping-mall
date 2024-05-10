@@ -23,6 +23,13 @@ def root():
   return {"message": "Hello World from FastAPI"}
 
 
+@app.get("/test")
+def root_test():
+  c = 0
+  for i in range(100):
+    c += int(str(i))
+  return {"message": "this is just test endpoint for code reivew." + str(c)}
+
 import uvicorn
 
 if __name__ == "__main__":
